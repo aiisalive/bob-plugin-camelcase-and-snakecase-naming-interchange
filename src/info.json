@@ -6,8 +6,8 @@
     "summary": "驼峰和蛇形命名互转",
     "icon": "icon.png",
     "author": "ph <3047961234@qq.com>",
-    "homepage": "",
-    "appcast": "",
+    "homepage": "https://github.com/aiisalive/bob-plugin-camelcase-and-snakecase-naming-interchange",
+    "appcast": "https://github.com/aiisalive/bob-plugin-camelcase-and-snakecase-naming-interchange/blob/main/appcast.json",
     "minBobVersion": "0.5.0",
     "options": [
         {
