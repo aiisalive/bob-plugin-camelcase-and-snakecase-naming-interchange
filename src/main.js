@@ -9,14 +9,21 @@ function translate(query, completion) {
             var realStr = translate_text.replace(/[\t\r\f\n\s]*/g, '');
             var tfStr = translate_text.replace(/\s/g, '_');
             var resArr = [];
-            // resArr.push('软件传过来的原文：' + translate_text);
-            // resArr.push('驼峰转换需要的原文：' + tfStr);
-            // resArr.push('软件原文去掉空格：' + realStr);
+            resArr.push('软件传过来的原文：' + translate_text);
+            resArr.push('驼峰转换需要的原文：' + tfStr);
+            resArr.push('软件原文去掉空格：' + realStr);
             if (realStr === realStr.toUpperCase()) {
                 // 去掉空格之后如果全是大写字母，那就是蛇形转驼峰
                 // 驼峰文字
                 resArr.push(tfStr.toLowerCase().replace(/_([a-z])/g, function (match, group1) {
                     return group1.toUpperCase();
+                }));
+            } else if (realStr === realStr.toLowerCase()) {
+                // 去掉空格之后如果全是小写字母，那就是蛇形转驼峰
+                // 驼峰文字
+                resArr.push(translate_text.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function (match, index) {
+                    if (+match === 0) return ''; // 处理空格
+                    return index === 0 ? match.toLowerCase() : match.toUpperCase();
                 }));
             } else {
                 // 有大写有小写，代表是驼峰转蛇形
