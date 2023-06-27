@@ -9,9 +9,9 @@ function translate(query, completion) {
             var realStr = translate_text.replace(/[\t\r\f\n\s]*/g, '');
             var tfStr = translate_text.replace(/\s/g, '_');
             var resArr = [];
-            resArr.push('软件传过来的原文：' + translate_text);
-            resArr.push('驼峰转换需要的原文：' + tfStr);
-            resArr.push('软件原文去掉空格：' + realStr);
+            // resArr.push('软件传过来的原文：' + translate_text);
+            // resArr.push('驼峰转换需要的原文：' + tfStr);
+            // resArr.push('软件原文去掉空格：' + realStr);
             if (realStr === realStr.toUpperCase()) {
                 // 去掉空格之后如果全是大写字母，那就是蛇形转驼峰
                 // 驼峰文字
