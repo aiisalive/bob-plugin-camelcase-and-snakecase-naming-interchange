@@ -1,0 +1,27 @@
+{
+    "identifier": "bob-plugin-camelcase-and-snakecase-naming-interchange",
+    "version": "0.0.1",
+    "category": "translate",
+    "name": "驼峰和蛇形命名互转",
+    "summary": "驼峰和蛇形命名互转",
+    "icon": "icon.png",
+    "author": "ph <3047961234@qq.com>",
+    "homepage": "",
+    "appcast": "",
+    "minBobVersion": "0.5.0",
+    "options": [
+        {
+            "identifier": "desc",
+            "type": "menu",
+            "title": "描述",
+            "defaultValue": "ph",
+            "menuValues": [
+              {
+                "title": "驼峰和蛇形命名互转;",
+                "value": "ph"
+              }
+            ],
+            "desc":"驼峰和蛇形命名互转;"
+        }
+    ]
+}

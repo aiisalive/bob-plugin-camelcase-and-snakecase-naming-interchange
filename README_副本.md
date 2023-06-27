@@ -1,1 +1,0 @@
-# bob-plugin-camelcase-and-snakecase-naming-interchange
