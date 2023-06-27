@@ -21,7 +21,14 @@ function translate(query, completion) {
             } else {
                 // 有大写有小写，代表是驼峰转蛇形
                 // 蛇形文字
-                resArr.push(realStr.replace(/([A-Z])/g, '_$1').toUpperCase());
+                var temp1 = realStr.replace(/([A-Z])/g, '_$1').toUpperCase();
+                var resStr;
+                if (temp1.startsWith('_')) {
+                    resStr = temp1.replace(/^_/, '');
+                } else {
+                    resStr = temp1;
+                }
+                resArr.push(resStr);
             }
             completion({
                 result: {
